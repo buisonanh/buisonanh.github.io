@@ -1,5 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Geologica', sans-serif;
+    color: #ffffff;
+    background-color: #1f1f1f; /* Replace with your desired background color */
+    background-image: url('https://images.unsplash.com/photo-1637825891035-1930cbd564dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); /* Replace <unsplash-search-keyword> with a keyword related to the image you want to fetch */
+    background-size: cover;
+    background-position: center;
+    background-repeat:repeat-y;
+    position: relative;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Replace with your desired overlay color */
+}
+
+h1 {
+    font-size: 80px; /* Adjust the font size as desired */
+    color: #ffffff; /* Adjust the font color */
+    text-align: center; /* Center the header text */
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 30px; /* Adjust the font size as desired */
+    font-weight: 400;
+    color: #ffffff; /* Adjust the font color */
+    text-align: center; /* Center the header text */
+    margin-top: 100px; /* Adjust the top margin to add some spacing */
+}
+
+p {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Add space between cards */
+    max-width: 1400px; /* Adjust the maximum width as needed */
+    margin: 100px auto; /* Adjust margin values as needed */
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: #3b3b3b;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Arrange content in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1663544093468-034ff949fcdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=663&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel {
+    margin-top: 100px;
+}
+
+
+
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+  /* Add some padding inside the card container */
+.card-container {
+    padding: 2px 16px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff; /* Adjust the font color */
+    text-align: center; /* Center the header text */
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* Adjust the font color */
+    text-align: center; /* Center the header text */
+    margin-top: 0;
+}
+

@@ -4,23 +4,53 @@
 
 body {
     font-family: 'Geologica', sans-serif;
-    color: #ffffff;
-    background-color: #1f1f1f; /* Replace with your desired background color */
     background-image: url('https://images.unsplash.com/photo-1637825891028-564f672aa42c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); /* Replace <unsplash-search-keyword> with a keyword related to the image you want to fetch */
     background-size: cover;
     background-position: center;
     background-repeat:repeat;
-    position: relative;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Replace with your desired overlay color */
+.container {
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    height: 80px;
+    width: 80px;
+    top: 5vh;
+    left: 10vw;
+}
+
+.logo img {
+    width: auto; /* Adjust the width as needed */
+    height: 50px;
+}
+
+.logo:hover {
+    box-shadow: 0 16px 25px 0 rgba(0,0,0,0.7);
+    transform: scale(1.05); /* Scale the card on hover */
+}
+
+.social-icons {
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 200%;
+    color: white;
+    padding: 10px;
+}
+
 
 h1 {
     font-size: 80px; /* Adjust the font size as desired */
@@ -34,7 +64,7 @@ h2 {
     font-weight: 400;
     color: #ffffff; /* Adjust the font color */
     text-align: center; /* Center the header text */
-    margin-top: 100px; /* Adjust the top margin to add some spacing */
+    margin-top: 20px; /* Adjust the top margin to add some spacing */
 }
 
 p {
@@ -73,7 +103,7 @@ p {
   /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 16px 25px 0 rgba(0,0,0,0.7);
-    transform: translateY(-5px);
+    transform: scale(1.05); /* Scale the card on hover */
 }
 
   /* Add some padding inside the card container */

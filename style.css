@@ -50,8 +50,8 @@ body {
 
 .nav-container {
     max-width: 50%;
-    align-self:center;
-    text-align: right;
+    align-self: center;
+    text-align: left;
 }
 
 .nav-links {
@@ -60,16 +60,10 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
     text-decoration: none;
     margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
+    font-size: 1.3rem;
     font-weight: bold;
-    font-style: italic;
 }
 
 .hero h1 {
@@ -84,23 +78,62 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin: 10px;
-    background: #ffffff;
-    color: #000000;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #272727;
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.4);
+    color: #000000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
-
 /* Footer Styles */
 footer {
     background: #000000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        max-width: 100%;
+        text-align: center;
+    }
+    .nav-container {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        margin: 5px 15px;
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }

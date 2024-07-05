@@ -7,17 +7,49 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
     background: #282828;
     color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background: transparent; /* Make the background transparent */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* At the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #545454; /* Adjust color as needed */
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
-    background: #000000;
-    background-image: url("https://i.pinimg.com/originals/64/a9/19/64a9196a102faf69e4ff8284cb3996ca.gif");
+    background: url("https://i.pinimg.com/originals/64/a9/19/64a9196a102faf69e4ff8284cb3996ca.gif") center/cover no-repeat;
     display: flex;
     align-items: center;
     color: white;
@@ -37,6 +69,7 @@ body {
 .main-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 2;
     width: 100%;
     max-width: 1200px;
@@ -72,7 +105,8 @@ body {
     text-align: center;
     transition: all 0.3s ease;
 }
-.btn:hover {
+
+.nav-links .btn:hover {
     background: rgba(255, 255, 255, 0.4);
     color: #000000;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
@@ -87,7 +121,6 @@ body {
     font-size: 1.3rem;
     margin-bottom: 20px;
 }
-
 
 /* Footer Styles */
 footer {
@@ -104,7 +137,7 @@ footer {
         align-items: center;
     }
 
-    .container{
+    .container {
         max-width: 100%;
         text-align: center;
     }

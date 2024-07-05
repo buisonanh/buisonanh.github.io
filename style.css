@@ -99,17 +99,17 @@ header {
     width: 100%;
     padding: 10px 30px;
     margin: 10px 0;
-    background: rgba(255, 255, 255, 0.15);
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .nav-links .btn:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #ffffff;
     color: #000000;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero h1 {

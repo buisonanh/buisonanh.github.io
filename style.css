@@ -49,7 +49,7 @@ header {
 .hero {
     position: relative;
     height: 100vh;
-    background: url("https://i.pinimg.com/originals/64/a9/19/64a9196a102faf69e4ff8284cb3996ca.gif") center/cover no-repeat;
+    background: url("https://i.pinimg.com/originals/64/a9/19/64a9196a102faf69e4ff8284cb3996ca.gif");
     display: flex;
     align-items: center;
     color: white;

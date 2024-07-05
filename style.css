@@ -20,7 +20,6 @@ body {
     background-image: url("https://i.pinimg.com/originals/64/a9/19/64a9196a102faf69e4ff8284cb3996ca.gif");
     display: flex;
     align-items: center;
-    text-align: left;
     color: white;
     padding: 0 10%;
 }
@@ -31,21 +30,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1;
 }
 
 .main-container {
     display: flex;
     justify-content: space-between;
-    align-items: left;
-    position: relative;
     z-index: 2;
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .container {
     max-width: 50%;
+    text-align: justify;
 }
 
 .nav-container {
@@ -59,11 +58,24 @@ body {
     flex-direction: column;
 }
 
-.nav-links a {
+.nav-links .btn {
     text-decoration: none;
-    margin: 10px 0;
     font-size: 1.3rem;
     font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #000000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero h1 {
@@ -76,24 +88,7 @@ body {
     margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    margin: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
 
-.btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    color: #000000;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
 /* Footer Styles */
 footer {
     background: #000000;
@@ -113,27 +108,23 @@ footer {
         max-width: 100%;
         text-align: center;
     }
+    
     .nav-container {
         max-width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     .nav-links {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .nav-links a {
-        margin: 5px 15px;
-        font-size: 1rem;
-    }
-
     .hero h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

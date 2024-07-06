@@ -156,7 +156,11 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
     }
 
     .hero p {

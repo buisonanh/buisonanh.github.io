@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Spotify Mix', sans-serif;
     background: #282828;
     color: #ffffff;
 }
@@ -75,12 +75,12 @@ header {
 }
 
 .container {
-    max-width: 60%;
+    max-width: 55%;
     text-align: justify;
 }
 
 .nav-container {
-    max-width: 40%;
+    max-width: 45%;
     align-self: center;
     text-align: left;
 }
@@ -99,7 +99,7 @@ header {
     padding: 10px 30px;
     margin: 10px 0;
     color: #ffffff;
-    border-radius: 50px;
+    border-radius: 5px;
     border-width: 1px;
     border-style: solid;
     text-align: center;
@@ -109,18 +109,19 @@ header {
 .nav-links .btn:hover {
     background: #ffffff;
     color: #000000;
+    font-style: italic;
 }
 
 .hero h1 {
-    font-size: 7rem;
-    margin-bottom: 20px;
+    font-size: 6rem;
+    margin-bottom: 10px;
 }
 .hero h2 {
     font-size: 1.8rem;
 }
 
 .hero p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
 }
 

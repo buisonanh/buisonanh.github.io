@@ -1,0 +1,199 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    display: flex; 
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #000;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+header .logo, .social-links {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+header .social-links {
+    gap: 10px; /* Added gap between icons */
+}
+
+header .social-links a {
+    color: #ffffff;
+    margin: 0 8px; /* Slightly reduced the space between icons */
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+header .social-links a:hover {
+    color: #545454;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Hero section styling */
+.hero {
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    background: url('your-background-image.png') no-repeat center center/cover;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hero .cta-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero .cta-button:hover {
+    background-color: #e6e6e6;
+}
+
+/* Feature section (cards) styling */
+.features {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.features .feature-card-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the feature cards */
+    gap: 20px; /* Adds space between cards */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.feature-card {
+    flex: 0 0 300px;
+    text-align: center;
+    background-color: #111111;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    white-space: normal;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Research and Projects Sections */
+.research-section {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+}
+
+.projects-section {
+    background-color: #1b1b1b;
+    padding: 50px 0;
+}
+
+/* News card styling */
+.news-link {
+    display: block; /* Make the entire card clickable */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from the parent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

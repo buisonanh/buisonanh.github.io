@@ -11,6 +11,7 @@
 </head>
 <body>
     <!-- Header Section -->
+    <!-- Add the Hamburger Menu Icon -->
     <header>
         <div class="logo">
             <img src="/imgs/logo.png" alt="Logo">
@@ -20,7 +21,8 @@
                 <a href="https://www.facebook.com/buisonanh/" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
-        <nav>
+        <div class="hamburger">&#9776;</div> <!-- Hamburger Icon -->
+        <nav class="nav-links">
             <ul>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -29,6 +31,7 @@
             </ul>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -96,4 +99,14 @@
         <p>© 2024 Bui Son Anh. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const header = document.querySelector('header');
+
+    hamburger.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+    });
+</script>
+
 </html>
+

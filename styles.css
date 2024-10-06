@@ -22,7 +22,7 @@ body {
 /* Header styling */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensure elements are spread out between left and right */
     align-items: center;
     padding: 20px;
     background-color: #000;
@@ -35,23 +35,33 @@ header .logo, .social-links {
 
 header .logo img {
     height: 40px;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 20px;
 }
 
 header .social-links {
-    gap: 10px; /* Added gap between icons */
+    display: flex;
+    gap: 10px; /* Add gap between icons */
 }
 
 header .social-links a {
     color: #ffffff;
-    margin: 0 8px; /* Slightly reduced the space between icons */
+    margin: 0 8px; /* Spacing between icons */
     font-size: 2rem;
     transition: color 0.3s ease;
 }
 
 header .social-links a:hover {
     color: #545454;
+}
+
+/* Navigation bar and hamburger menu */
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header .hamburger {
+    display: none; /* Hide hamburger on larger screens */
 }
 
 header nav ul {
@@ -178,22 +188,88 @@ footer {
     color: white;
 }
 
+/* Ensure responsiveness for smaller screens */
 @media (max-width: 768px) {
-    .features {
+    /* Header */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    /* Social links and logo remain in a row */
+    header .logo, .social-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Hide the navigation links initially */
+    header nav ul {
+        display: none; /* Hide the menu by default */
         flex-direction: column;
+        align-items: flex-end;
+        list-style: none;
+        position: absolute;
+        top: 60px; /* Adjust to below the header */
+        right: -30px; /* Align to the right */
+        background-color: #000000; /* Match the background */
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    /* Show the navigation when 'nav-open' is added */
+    header.nav-open nav ul {
+        display: flex; /* Show the menu */
+    }
+
+    /* Hamburger icon */
+    header .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        margin-left: auto;
+    }
+
+    /* Hero section */
+    .hero h1 {
+        font-size: 32px; /* Reduce font size */
+        margin-top: 20px;
+    }
+
+    .hero p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Features section */
+    .features {
+        flex-direction: column; /* Stack the cards vertically */
         align-items: center;
     }
 
     .feature-card {
-        width: 90%;
+        width: 90%; /* Make cards take up most of the screen */
         margin-bottom: 20px;
     }
 
-    .hero h2 {
-        font-size: 36px;
+    /* Reduce image size in cards */
+    .feature-card img {
+        height: 250px; /* Adjust card image size */
     }
 
-    .hero p {
-        font-size: 16px;
+    /* News section */
+    .news-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-link img {
+        width: 100%; /* Ensure images take up full width of card */
+        height: auto;
     }
 }

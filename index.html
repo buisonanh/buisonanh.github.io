@@ -10,35 +10,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <!-- Add the Hamburger Menu Icon -->
+    
     <header>
         <div class="logo">
-            <img src="/imgs/logo.png" alt="Logo">
+            <a href="index.html">
+                <img src="/imgs/logo.png" alt="Logo">
+            </a>
             <div class="social-links">
                 <a href="https://github.com/buisonanh" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/son-anh-bui" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/buisonanh/" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
-        <div class="hamburger">&#9776;</div> <!-- Hamburger Icon -->
+        <div class="hamburger">&#9776;</div>
         <nav class="nav-links">
             <ul>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#news">News</a></li>
             </ul>
         </nav>
     </header>
-
 
     <!-- Hero Section -->
     <section class="hero">
         <h1>Hi, I am Son Anh</h1>
         <p>With expertise in deep learning and computer vision, I leverage advanced technologies to tackle complex challenges and deliver transformative innovation across various industries.</p>
 
-        <a href="#" class="cta-button">About me</a>
+        <a href="about.html" class="cta-button">About me</a>
     </section>
 
     <h2 id="research">Research</h2>
@@ -94,10 +94,11 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
     <footer>
-        <p>© 2024 Bui Son Anh. All rights reserved.</p>
+        <p>© 2024 Bui Son Anh</p>
     </footer>
+    
+
 </body>
 <script>
     const hamburger = document.querySelector('.hamburger');
@@ -106,7 +107,22 @@
     hamburger.addEventListener('click', () => {
         header.classList.toggle('nav-open');
     });
+
+    // Load the header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+    // Load the footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
 </script>
+
 
 </html>
 

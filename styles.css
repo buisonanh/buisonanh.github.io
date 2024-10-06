@@ -36,6 +36,7 @@ header .logo, .social-links {
 header .logo img {
     height: 40px;
     margin-right: 20px;
+    margin-left: auto;
 }
 
 header .social-links {
@@ -67,7 +68,7 @@ header .hamburger {
 header nav ul {
     display: flex;
     list-style: none;
-    margin-right: 40px;
+    margin-right: auto;
 }
 
 header nav ul li {
@@ -83,10 +84,12 @@ header nav ul li a {
 
 /* Hero section styling */
 .hero {
+    margin-bottom: 100px;
     text-align: center;
     color: white;
-    padding: 100px 20px;
-    background: url('your-background-image.png') no-repeat center center/cover;
+    padding: 8rem 20px;
+    background: url('https://images.unsplash.com/photo-1712295214766-a604cc48c1e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    text-shadow: #0000006b 0 2px 2px;
 }
 
 .hero h1 {
@@ -110,6 +113,8 @@ header nav ul li a {
     border-radius: 25px;
     text-decoration: none;
     font-size: 16px;
+    text-shadow: none;
+    box-shadow: #0000006b 0 5px 5px;
 }
 
 .hero .cta-button:hover {
@@ -134,9 +139,8 @@ header nav ul li a {
 .feature-card {
     flex: 0 0 400px;
     text-align: center;
-    background-color: #111111;
+    background-color: #151515;
     border-radius: 10px;
-    padding: 20px;
     color: white;
     white-space: normal;
     overflow: hidden;
@@ -146,14 +150,13 @@ header nav ul li a {
 .feature-card h3 {
     font-size: 20px;
     line-height: 1.4;
-    margin-top: 10px;
+    padding: 15px 15px;
 }
 
 .feature-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    max-height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image scales while maintaining aspect ratio */
 }
 
 .feature-card:hover {
@@ -194,13 +197,15 @@ footer {
     header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
     }
 
     /* Social links and logo remain in a row */
-    header .logo, .social-links {
+    header .logo {
         flex-direction: row;
-        align-items: center;
+    }
+    
+    header .social-links {
+        flex-direction: row;
     }
 
     /* Hide the navigation links initially */
@@ -211,7 +216,7 @@ footer {
         list-style: none;
         position: absolute;
         top: 60px; /* Adjust to below the header */
-        right: -30px; /* Align to the right */
+        right: 10px; /* Align to the right */
         background-color: #000000; /* Match the background */
         padding: 10px;
         border-radius: 5px;
@@ -247,13 +252,23 @@ footer {
 
     /* Features section */
     .features {
-        flex-direction: column; /* Stack the cards vertically */
-        align-items: center;
+        flex-direction: row; /* Keep the cards in a row */
+        justify-content: flex-start; /* Align to the left */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+        scroll-behavior: smooth; /* Smooth scrolling */
+        gap: 10px; /* Add space between cards */
+        padding-bottom: 10px; /* Ensure there's space for the scroll bar */
     }
 
     .feature-card {
-        width: 90%; /* Make cards take up most of the screen */
-        margin-bottom: 20px;
+        flex: 0 0 80%; /* Make the cards take up 80% of the screen width */
+        margin-right: 10px; /* Add space between cards */
+    }
+
+    /* Center the first card */
+    .feature-card:first-child {
+        margin-left: calc(10%); /* Adjust the margin to center the first card */
     }
 
     /* Reduce image size in cards */

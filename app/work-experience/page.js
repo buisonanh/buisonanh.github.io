@@ -4,7 +4,7 @@ export default function WorkExperience() {
             company: "PIXTA Vietnam Co. Ltd.",
             role: "AI Engineer Intern",
             duration: "Oct 2024 - Present",
-            skills: "Vector Database, LLM, MLOps",
+            skills: "Deep Learning, Computer Vision, PyTorch, Vector Database, LLM, MLOps",
         },
     ];
 

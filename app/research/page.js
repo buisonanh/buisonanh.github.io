@@ -44,7 +44,7 @@ export default function Research() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Read More
+                            Read Paper
                         </a>
                     </li>
                 ))}

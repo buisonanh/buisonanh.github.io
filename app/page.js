@@ -3,7 +3,7 @@ import { SiGooglescholar } from "react-icons/si"; // Google Scholar Icon
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center px-8 pb-20 gap-16 sm:p-20 text-center">
+    <div className="flex flex-col items-center justify-center px-8 pb-40 gap-16 sm:p-40 text-center">
 
       <main className="flex flex-col gap-10 items-center sm:items-start">
 

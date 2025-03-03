@@ -23,12 +23,9 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative w-full min-h-screen overflow-auto`}>
         
         {/* 🔹 Background Container (Fixed for All Pages) */}
-        <div className="fixed top-0 left-0 w-full h-full -z-10">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}
-          />
+        <div className="fixed top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat bg-[url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')]">
         </div>
+
 
 
 

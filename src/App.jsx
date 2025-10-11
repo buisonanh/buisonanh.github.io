@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from '@/components/portfolio/Header';
 import Hero from '@/components/portfolio/Hero';
 import About from '@/components/portfolio/About';
@@ -30,6 +32,8 @@ function App() {
         </main>
         <Footer />
         <Toaster />
+        <Analytics />
+        <SpeedInsights />
       </div>
     </>
   );

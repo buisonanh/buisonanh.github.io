@@ -49,7 +49,8 @@ const experience = {
       title: 'AI Engineer',
       type: 'Internship',
       startDate: '2024-10-01', // October 2024
-      endDate: null, // Present
+      // CHANGE THIS LINE BELOW
+      endDate: '2025-07-01', // Set this to the Full-time start date
       skills: 'Python (Programming Language), PyTorch and +4 skills',
     },
   ],
@@ -94,5 +95,6 @@ const WorkExperience = () => {
     </section>
   );
 };
+
 
 export default WorkExperience; 

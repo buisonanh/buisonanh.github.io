@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 
 const newsArticles = [
   {
+    title: "Greenwich Việt Nam ghi dấu ấn học thuật với 7 báo cáo khoa học và Best Paper Award tại CSoNet 2025",
+    description: "Sinh viên Bùi Sơn Anh trình bày tại phiên thảo luận CSoNet 2025...",
+    url: "https://greenwich.edu.vn/greenwich-viet-nam-ghi-dau-an-hoc-thuat-voi-7-bao-cao-khoa-hoc-va-best-paper-award-tai-csonet-2025/#:~:text=Sinh%20vi%C3%AAn%20B%C3%B9i%20S%C6%A1n%20Anh%20tr%C3%ACnh%20b%C3%A0y%20t%E1%BA%A1i%20phi%C3%AAn%20th%E1%BA%A3o%20lu%E1%BA%ADn",
+  },
+  {
     title: "Sinh viên FPT Edu dùng AI phát triển mô hình nhận diện cảm xúc",
     description: "Nhóm sinh viên: Bùi Sơn Anh, Tạ Hữu Anh Dương và Nguyễn Thanh Hùng (Greenwich Việt Nam, cơ sở Hà Nội thuộc FPT Edu) đã triển khai nghiên cứu...",
     url: "https://dantri.com.vn/giao-duc/sinh-vien-fpt-edu-dung-ai-phat-trien-mo-hinh-nhan-dien-cam-xuc-20240823142351982.htm",
@@ -40,5 +45,6 @@ const News = () => (
     </motion.div>
   </section>
 );
+
 
 export default News; 

@@ -34,8 +34,8 @@ const Education = () => {
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
         <BrutalCard className="p-7 h-full flex flex-col">
           <div className="flex items-center gap-3 mb-4">
-            <div className="border-2 border-foreground/60 p-1.5 flex-shrink-0">
-              <GraduationCap className="w-5 h-5 text-gray-300" aria-hidden="true" />
+            <div className="border-2 border-cyan-400/50 p-1.5 flex-shrink-0">
+              <GraduationCap className="w-5 h-5 text-cyan-400" aria-hidden="true" />
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-white">Education</h3>
           </div>
@@ -57,8 +57,8 @@ const Education = () => {
         <BrutalCard className="p-7 h-full flex flex-col gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="border-2 border-foreground/60 p-1.5 flex-shrink-0">
-                <Trophy className="w-5 h-5 text-gray-300" aria-hidden="true" />
+              <div className="border-2 border-cyan-400/50 p-1.5 flex-shrink-0">
+                <Trophy className="w-5 h-5 text-cyan-400" aria-hidden="true" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">Awards</h3>
             </div>
@@ -72,8 +72,8 @@ const Education = () => {
           </div>
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="border-2 border-foreground/60 p-1.5 flex-shrink-0">
-                <Users className="w-5 h-5 text-gray-300" aria-hidden="true" />
+              <div className="border-2 border-cyan-400/50 p-1.5 flex-shrink-0">
+                <Users className="w-5 h-5 text-cyan-400" aria-hidden="true" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-white">Activities &amp; Service</h3>
             </div>

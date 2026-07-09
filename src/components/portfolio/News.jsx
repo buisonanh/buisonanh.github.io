@@ -33,7 +33,7 @@ const News = () => (
         <BrutalCard key={idx} className="p-7 h-full flex flex-col">
           <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">{article.title}</h3>
           <p className="text-gray-300 mb-4 flex-grow">{article.description}</p>
-          <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline text-base font-medium mt-auto">Read Article</a>
+          <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-cyan-400 hover:underline text-base font-medium mt-auto">Read Article</a>
         </BrutalCard>
       ))}
     </div>

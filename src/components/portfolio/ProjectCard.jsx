@@ -16,7 +16,7 @@ const ProjectCard = ({ project, index }) => {
         <div className="flex items-start justify-between gap-3 mb-2">
           <h3 className="text-xl md:text-2xl font-bold text-white">{project.title}</h3>
           {project.badge && (
-            <span className="flex-shrink-0 text-xs font-mono uppercase tracking-wide text-gray-200 border border-white/30 px-3 py-1 whitespace-nowrap">
+            <span className="flex-shrink-0 text-xs font-mono uppercase tracking-wide text-cyan-400 border border-cyan-400/50 px-3 py-1 whitespace-nowrap">
               {project.badge}
             </span>
           )}
@@ -35,7 +35,7 @@ const ProjectCard = ({ project, index }) => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-200 hover:underline text-base font-medium mt-4"
+            className="text-gray-200 hover:text-cyan-400 hover:underline text-base font-medium mt-4"
           >
             {project.linkText || 'Read Paper'} →
           </a>

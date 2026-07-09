@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import SectionHeading from '@/components/portfolio/SectionHeading';
+import BrutalCard from '@/components/portfolio/BrutalCard';
 
 const newsArticles = [
   {
@@ -26,23 +27,16 @@ const newsArticles = [
 
 const News = () => (
   <section id="news" className="py-20 lg:py-32 container mx-auto px-4 sm:px-6 lg:px-8">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-    >
-      <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8">News</h2>
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-        {newsArticles.map((article, idx) => (
-          <div key={idx} className="h-full flex flex-col rounded-2xl border border-gray-700 bg-gradient-to-br from-black via-zinc-900 to-gray-900 p-7 shadow-xl shadow-black/30 transition-all duration-300">
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">{article.title}</h3>
-            <p className="text-gray-300 mb-4 flex-grow">{article.description}</p>
-            <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline text-base font-medium mt-auto">Read Article</a>
-          </div>
-        ))}
-      </div>
-    </motion.div>
+    <SectionHeading index="05" title="News" />
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+      {newsArticles.map((article, idx) => (
+        <BrutalCard key={idx} className="p-7 h-full flex flex-col">
+          <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">{article.title}</h3>
+          <p className="text-gray-300 mb-4 flex-grow">{article.description}</p>
+          <a href={article.url} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:underline text-base font-medium mt-auto">Read Article</a>
+        </BrutalCard>
+      ))}
+    </div>
   </section>
 );
 

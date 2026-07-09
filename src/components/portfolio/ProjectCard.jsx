@@ -1,32 +1,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/use-toast';
-import { ArrowUpRight } from 'lucide-react';
+import BrutalCard from '@/components/portfolio/BrutalCard';
 
 const ProjectCard = ({ project, index }) => {
-  const showToast = () => {
-    toast({
-      title: "🚧 View Project",
-      description: "This feature isn't implemented yet—but don't worry! You can request it in your next prompt! 🚀",
-    });
-  };
-
   return (
     <motion.div
-      className="group overflow-hidden rounded-2xl mb-6 h-full flex flex-col"
+      className="group mb-6 h-full flex flex-col"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div
-        className="rounded-2xl border border-gray-700 bg-gradient-to-br from-black via-zinc-900 to-gray-900 backdrop-blur-md p-7 shadow-xl shadow-black/30 transition-all duration-300 group-hover:shadow-2xl group-hover:border-gray-400 group-hover:ring-2 group-hover:ring-gray-400/40 group-hover:scale-[1.025] flex flex-col h-full"
-      >
-        <h3 className="text-xl md:text-2xl font-bold mb-1 text-white drop-shadow-lg">{project.title}</h3>
-        {project.role && (
-          <div className="italic text-sm text-gray-300 mb-2">Role: {project.role}</div>
+      <BrutalCard className="p-7 flex flex-col h-full">
+        <div className="flex items-start justify-between gap-3 mb-2">
+          <h3 className="text-xl md:text-2xl font-bold text-white">{project.title}</h3>
+          {project.badge && (
+            <span className="flex-shrink-0 text-xs font-mono uppercase tracking-wide text-gray-200 border border-white/30 px-3 py-1 whitespace-nowrap">
+              {project.badge}
+            </span>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs font-mono uppercase tracking-wide text-gray-400 mb-2">
+          {project.venue && <span>{project.venue}</span>}
+          {project.venue && project.role && <span className="text-gray-600">·</span>}
+          {project.role && <span>{project.role}</span>}
+        </div>
+        {project.description && (
+          <p className="text-sm text-gray-400 mb-2">{project.description}</p>
         )}
         <div className="flex-grow" />
         {project.link && (
@@ -36,10 +37,10 @@ const ProjectCard = ({ project, index }) => {
             rel="noopener noreferrer"
             className="text-gray-200 hover:underline text-base font-medium mt-4"
           >
-            {project.linkText || 'Read Paper'}
+            {project.linkText || 'Read Paper'} →
           </a>
         )}
-      </div>
+      </BrutalCard>
     </motion.div>
   );
 };

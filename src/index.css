@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @layer base {
   :root {
@@ -26,7 +26,7 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-    --radius: 0.5rem;
+    --radius: 0px;
   }
 
   .dark {
@@ -64,5 +64,41 @@
     font-family: 'Sora', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .brutal-card {
+    @apply relative bg-black border-2 border-foreground/80 transition-transform duration-200 ease-out;
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground) / 0.9);
+  }
+  .brutal-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 0 hsl(var(--foreground) / 0.9);
+  }
+  .grid-backdrop {
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .btn-hard {
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground) / 0.9);
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+  .btn-hard:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground) / 0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

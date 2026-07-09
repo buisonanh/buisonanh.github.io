@@ -18,6 +18,7 @@ module.exports = {
 		extend: {
       fontFamily: {
         sans: ['Sora', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
@@ -68,10 +69,15 @@ module.exports = {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: 0 },
 				},
+				blink: {
+					'0%, 49%': { opacity: 1 },
+					'50%, 100%': { opacity: 0 },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+				blink: 'blink 1s steps(1) infinite',
 			},
 		},
 	},

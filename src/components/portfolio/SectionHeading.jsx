@@ -11,7 +11,7 @@ const SectionHeading = ({ index, title, subtitle, center = false }) => (
     className={`mb-12 md:mb-16 ${center ? 'flex flex-col items-center' : ''}`}
   >
     <div className={`flex items-baseline gap-4 md:gap-6 ${center ? 'justify-center' : ''}`}>
-      <span className="text-4xl md:text-6xl font-extrabold font-mono leading-none text-cyan-400/25" aria-hidden="true">
+      <span className="text-4xl md:text-6xl font-extrabold font-mono leading-none text-cyan-400" aria-hidden="true">
         {index}
       </span>
       <h2 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight">{title}</h2>

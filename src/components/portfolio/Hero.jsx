@@ -33,7 +33,7 @@ const Hero = () => {
           <p className="font-mono text-lg md:text-2xl uppercase tracking-widest text-muted-foreground mb-8">
             AI Engineer
             <span
-              className="inline-block w-[3px] md:w-[4px] h-[0.8em] bg-foreground ml-2 align-middle animate-blink motion-reduce:hidden"
+              className="inline-block w-[3px] md:w-[4px] h-[0.8em] bg-cyan-400 ml-2 align-middle animate-blink motion-reduce:hidden"
               aria-hidden="true"
             />
           </p>
@@ -91,7 +91,7 @@ const Hero = () => {
         whileHover={{ y: -5 }}
         aria-label="Scroll to about section"
       >
-        <ArrowDown className="w-8 h-8 animate-bounce text-muted-foreground hover:text-foreground" />
+        <ArrowDown className="w-8 h-8 animate-bounce text-muted-foreground hover:text-cyan-400" />
       </motion.a>
     </section>
   );

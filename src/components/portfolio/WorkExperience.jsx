@@ -46,11 +46,11 @@ const experience = {
       startDate: '2025-06-01', // June 2025
       endDate: null, // Present
       highlights: [
-        "Lead engineer on PIXTA's production RAG chatbot — Milvus + LLM, MVP through v0.7.",
-        'Raised bot coverage 29% → 51% via multi-query retrieval (RRF) and a Claude Sonnet migration.',
-        'Cut latency 12s → 5–6s by re-architecting into an on-demand retrieval agent.',
-        'Built a Langfuse + LLM-as-judge evaluation stack as an automated release gate.',
-        'Shipped a photographer-matching PoC for fotowa in under 4 weeks.',
+        "Leading PIXTA's production AI chatbot — from early prototype to a fully deployed product.",
+        'Significantly improved answer accuracy through continuous iteration and model upgrades.',
+        "Cut the system's response time roughly in half by redesigning its core architecture.",
+        'Built an automated system to monitor and evaluate AI output quality.',
+        'Delivered a working AI-matching prototype for a partner company in under a month.',
       ],
       tags: ['RAG', 'Agents', 'Milvus', 'Langfuse', 'Claude API'],
     },
@@ -60,8 +60,8 @@ const experience = {
       startDate: '2024-10-01', // October 2024
       endDate: '2025-06-01', // Full-time start date
       highlights: [
-        'Optimized Vision-Language Models and vector search for retrieval accuracy.',
-        'Ran benchmarking and indexing optimization; improved system docs.',
+        'Researched and optimized AI models for better search accuracy.',
+        'Ran performance benchmarking and contributed to system documentation.',
       ],
       tags: ['VLMs', 'Vector Search', 'PyTorch'],
     },
@@ -90,14 +90,14 @@ const WorkExperience = () => {
             <div className="border-l-2 border-white/20 pl-6 space-y-10 relative">
               {experience.roles.map((role, idx) => (
                 <div key={idx} className="relative">
-                  <div className="absolute -left-[1.65rem] top-1.5 w-3 h-3 bg-foreground border-2 border-black"></div>
+                  <div className="absolute -left-[1.65rem] top-2 w-3 h-3 bg-cyan-400 border-2 border-black"></div>
                   <div className="text-lg font-bold text-white">{role.title}</div>
                   <div className="text-sm font-mono uppercase tracking-wide text-gray-400 mb-1">{role.type}</div>
                   <div className="text-xs font-mono text-gray-500 mb-3">{formatDateRange(role.startDate, role.endDate)}</div>
                   <ul className="space-y-2.5 mb-4">
                     {role.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-gray-300">
-                        <span className="w-1.5 h-1.5 bg-foreground mt-1.5 flex-shrink-0" aria-hidden="true" />
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-cyan-400 flex-shrink-0" aria-hidden="true" />
                         <span>{point}</span>
                       </li>
                     ))}

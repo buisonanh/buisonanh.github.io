@@ -52,7 +52,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-mono text-sm uppercase tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+                className="font-mono text-sm uppercase tracking-wide text-muted-foreground hover:text-cyan-400 transition-colors"
               >
                 {item.name}
               </a>
@@ -90,7 +90,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-mono text-2xl uppercase tracking-wide text-muted-foreground hover:text-foreground transition-colors"
+                className="font-mono text-2xl uppercase tracking-wide text-muted-foreground hover:text-cyan-400 transition-colors"
               >
                 {item.name}
               </a>
